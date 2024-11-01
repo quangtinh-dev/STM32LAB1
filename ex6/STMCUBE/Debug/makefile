@@ -64,8 +64,8 @@ all: main-build
 main-build: ex6.elf secondary-outputs
 
 # Tool invocations
-ex6.elf: $(OBJS) $(USER_OBJS) D:\MCU\lab\lab1_offical\ex6\STMCUBE\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ex6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\MCU\lab\lab1_offical\ex6\STMCUBE\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ex6.elf: $(OBJS) $(USER_OBJS) C:\Users\Tinh\STM32CubeIDE\workspace_1.7.0\GIT_LAB1\MCU_LAB1\ex6\STMCUBE\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ex6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\Tinh\STM32CubeIDE\workspace_1.7.0\GIT_LAB1\MCU_LAB1\ex6\STMCUBE\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ex6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
